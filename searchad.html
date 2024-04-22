@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Skill Development Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Search for a Course</h1>
+    </header>
+
+    <main>
+        <section id="search">
+            <h2>Enter Course ID to Find:</h2>
+            <form id="courseForm">
+                <label for="courseId">Course ID:</label><br>
+                <input type="text" id="courseId" name="courseId" required><br><br>
+                <button class="button" type="button" onclick="findCourse()">Find</button>
+            </form>
+        </section>
+
+        <section id="courseDetails" style="display: none;">
+            <h2>Course Details</h2>
+            <div id="details">
+                <p>Title : OOP</p>
+                <p>Duration : 42 hr</p>
+                <p>Instructor : Tanjina Helaly</p>
+            </div>
+            <button class="button" onclick="goBack()">Back</button>
+            <button class="button" onclick="addTopic()">Add Topic</button>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function findCourse() {
+            var courseId = document.getElementById("courseId").value;
+            if (courseId === "201") {
+                document.getElementById("courseDetails").style.display = "block";
+            } else {
+                alert("No course found with that ID.");
+                document.getElementById("courseDetails").style.display = "none";
+            }
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        function addTopic() {
+            window.location.href = "add_topic.html";
+        }
+    </script>
+</body>
+</html>

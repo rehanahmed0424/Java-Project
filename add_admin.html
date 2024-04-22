@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Admin - Skill Development Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add Admin</h1>
+    </header>
+
+    <main>
+        <section id="addAdmin">
+            <h2>Enter Admin Details</h2>
+            <form id="adminForm">
+                <label for="adminName">Admin Name:</label><br>
+                <input type="text" id="adminName" name="adminName" required><br><br>
+                <label for="adminId">Admin ID:</label><br>
+                <input type="text" id="adminId" name="adminId" required><br><br>
+                <button class="button" type="button" onclick="addAdmin()">Add</button>
+                <button class="button" onclick="goBack()">Back</button>
+            </form>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function addAdmin() {
+            var adminName = document.getElementById("adminName").value;
+            var adminId = document.getElementById("adminId").value;
+            // Add code here to add admin
+            alert("Admin added:\nName: " + adminName + "\nID: " + adminId);
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

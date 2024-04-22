@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student - Skill Development Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add Student</h1>
+    </header>
+
+    <main>
+        <section id="addStudent">
+            <h2>Enter Student Details</h2>
+            <form id="studentForm">
+                <label for="studentName">Student Name:</label><br>
+                <input type="text" id="studentName" name="studentName" required><br><br>
+                <label for="studentId">Student ID:</label><br>
+                <input type="text" id="studentId" name="studentId" required><br><br>
+                <button class="button" type="button" onclick="addStudent()">Add</button>
+                <button class="button" onclick="goBack()">Back</button>
+            </form>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function addStudent() {
+            var studentName = document.getElementById("studentName").value;
+            var studentId = document.getElementById("studentId").value;
+            // Add code here to add student
+            alert("Student added:\nName: " + studentName + "\nID: " + studentId);
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

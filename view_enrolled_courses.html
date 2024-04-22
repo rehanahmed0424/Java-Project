@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Enrolled Courses - Skill Development Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>View Enrolled Courses</h1>
+    </header>
+
+    <main>
+        <section id="courseList">
+            <h2>List of Enrolled Courses</h2>
+            <ul>
+                <li>
+                    <h3>OOP</h3>
+                    <p>Title : OOP</p>
+                    <p>Duration : 42 hr</p>
+                    <p>Instructor : Tanjina Helaly</p>
+                    <button class="button" onclick="attendClass()">Attend Class</button>
+                    <button class="button" onclick="cancelEnrollment()">Cancel Enrollment</button>
+                </li>
+                <!-- Other courses... -->
+            </ul>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function attendClass() {
+            // Redirect to course completed page
+            window.location.href = "course_completed.html";
+        }
+
+        function cancelEnrollment() {
+            // Add code here to cancel enrollment
+            alert("Enrollment cancelled!");
+        }
+    </script>
+</body>
+</html>

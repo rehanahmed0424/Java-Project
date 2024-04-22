@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Topic - Skill Development Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add Topic</h1>
+    </header>
+
+    <main>
+        <section id="addTopic">
+            <h2>Enter Topic Name:</h2>
+            <form id="topicForm">
+                <label for="topicName">Topic Name:</label><br>
+                <input type="text" id="topicName" name="topicName" required><br><br>
+                <button class="button" type="button" onclick="addTopic()">Add</button>
+                <button class="button" onclick="goBack()">Back</button>
+            </form>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function addTopic() {
+            var topicName = document.getElementById("topicName").value;
+            // Add code here to add topic
+            alert("Topic added: " + topicName);
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

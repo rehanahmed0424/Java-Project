@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course - Skill Development Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Add Course</h1>
+    </header>
+
+    <main>
+        <section id="addCourse">
+            <h2>Enter Course Details</h2>
+            <form id="courseForm">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title" required><br><br>
+                <label for="duration">Duration:</label><br>
+                <input type="text" id="duration" name="duration" required><br><br>
+                <label for="instructor">Instructor Name:</label><br>
+                <input type="text" id="instructor" name="instructor" required><br><br>
+                <button class="button" type="button" onclick="addCourse()">Add</button>
+                <button class="button" onclick="goBack()">Back</button>
+            </form>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        function addCourse() {
+            var title = document.getElementById("title").value;
+            var duration = document.getElementById("duration").value;
+            var instructor = document.getElementById("instructor").value;
+            // Add code here to add course
+            alert("Course added:\nTitle: " + title + "\nDuration: " + duration + "\nInstructor: " + instructor);
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

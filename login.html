@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Skill Development Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Skill Development Platform</h1>
+    </header>
+
+    <main>
+        <section id="login">
+            <h2>Login</h2>
+            <form method="GET" onsubmit="return redirectToHomePage()">
+                <label for="id">ID:</label><br>
+                <input type="text" id="id" name="id" required><br>
+                <input type="submit" value="Login">
+               
+                <a href="signup.html" class="button">Sign Up</a>
+           
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+
+    <script>
+        function redirectToHomePage() {
+            var id = document.getElementById('id').value;
+            var homepage;
+            
+            if (id === '000') {
+                homepage = 'student_homepage.html';
+            } else if (id === '111') {
+                homepage = 'teacher_homepage.html';
+            } else if (id === '222') {
+                homepage = 'admin_homepage.html';
+            } else {
+                alert('Invalid ID. Please enter 000 for student, 111 for teacher, or 222 for admin.');
+                return false; // Prevent form submission
+            }
+            
+            window.location.href = homepage;
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>
